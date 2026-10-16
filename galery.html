@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery - My First Web</title>
+
+    <!-- Bootstrap 5 / Tema Bootswatch -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .gallery-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        .gallery-title {
+            font-weight: 800;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        @media (max-width: 576px) {
+            .gallery-img {
+                height: 220px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light text-dark d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                MyWebsite
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Buka navigasi"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="profil.html">
+                            Profile
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Activity.html">
+                            Activity
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="galery.html"
+                        >
+                            Gallery
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- KONTEN UTAMA -->
+    <main class="container py-5 flex-grow-1">
+        <!-- JUDUL GALLERY -->
+        <div class="text-center mb-5">
+            <h1 class="display-5 text-primary gallery-title">
+                My Gallery
+            </h1>
+
+            <p class="lead text-muted">
+                Galeri foto dan dokumentasi kegiatan saya.
+            </p>
+
+            <hr class="w-25 mx-auto">
+        </div>
+
+        <!-- GRID GALLERY -->
+        <div class="row g-4">
+
+            <!-- FOTO 1 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm gallery-card">
+                    <img
+                        src="op.jpg"
+                        class="card-img-top gallery-img"
+                        alt="Teman Universitas Yarsi"
+                        loading="lazy"
+                    >
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">
+                            College Friend
+                        </h5>
+
+                        <p class="card-text text-muted small">
+                            Teman Universitas Yarsi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOTO 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm gallery-card">
+                    <img
+                        src="io.jpg"
+                        class="card-img-top gallery-img"
+                        alt="Foto diri"
+                        loading="lazy">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">
+                            My Self
+                        </h5>
+
+                        <p class="card-text text-muted small">
+                            ★★★★★
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOTO 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm gallery-card">
+                    <img
+                        src="ol.jpeg"
+                        class="card-img-top gallery-img"
+                        alt="Lomba lari estafet 4 x 100 meter"
+                        loading="lazy"
+                    >
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">
+                            Lomba Lari Estafet
+                        </h5>
+
+                        <p class="card-text text-muted small">
+                            Dokumentasi lomba lari estafet 4 x 100 meter.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOTO 4 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm gallery-card">
+                    <img
+                        src="11.jpg"
+                        class="card-img-top gallery-img"
+                        alt="Bersama teman SMA"
+                        loading="lazy"
+                    >
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">
+                            Bersama Teman SMA
+                        </h5>
+
+                        <p class="card-text text-muted small">
+                            Momen bersama teman-teman.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOTO 5 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm gallery-card">
+                    <img
+                        src="mtr.jpg"
+                        class="card-img-top gallery-img"
+                        alt="Dokumentasi motor"
+                        loading="lazy"
+                    >
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">
+                            Motor Nyusahin
+                        </h5>
+
+                        <p class="card-text text-muted small">
+                            Dokumentasi motor kesayangan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOTO 6 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm gallery-card">
+                    <img
+                        src="gta.jpeg"
+                        class="card-img-top gallery-img"
+                        alt="Dokumentasi game GTA V"
+                        loading="lazy"
+                    >
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">
+                            GTA V
+                        </h5>
+
+                        <p class="card-text text-muted small">
+                            Koleksi dokumentasi game favorit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container d-flex justify-content-between align-items-center footer-content small opacity-75">
+
+            <span>
+                &copy; 2026 My First Web. All Rights Reserved.
+            </span>
+
+            <span>
+                My Gallery
+            </span>
+
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

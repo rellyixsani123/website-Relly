@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Tamu</title>
+    <!-- 1. WAJIB DITAMBAHKAN: Hubungkan ke file Bootstrap agar styling class Card dan Form berfungsi -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<!-- 2. MODIFIKASI BODY: Menggunakan kelas utilitas Bootstrap agar layout rapi di tengah halaman -->
+<body class="text-dark d-flex flex-column align-items-center justify-content-center min-vh-100" style="background-color: #8db6bc; padding: 20px;">
+
+    <!-- 3. PENGGANTI TOTAL: Memasang struktur Card Buku Tamu yang Anda minta -->
+    <!-- CARD KEDUA: FORMULIR BUKU TAMU -->
+    <div class="container my-5" style="max-width: 550px;">
+        <div class="p-4 bg-white rounded-4 shadow-sm text-start">
+            <h5 class="fw-bold mb-1">Buku Tamu Pengunjung</h5>
+            <p class="text-muted small mb-3">Silakan isi form di bawah ini sebagai kenang-kenangan sudah berkunjung:</p>
+            <form>
+                <div class="mb-3">
+                    <label for="inputNama" class="form-label fw-semibold">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="inputNama" placeholder="Contoh: Budi Santoso">
+                </div>
+                <div class="mb-3">
+                    <label for="inputEmail" class="form-label fw-semibold">Email / NPM</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="nama@yarsi.ac.id">
+                </div>
+                <div class="mb-3">
+                    <label for="inputPesan" class="form-label fw-semibold">Pesan / Kesan</label>
+                    <!-- Memperbaiki penutupan tag textarea yang sempat terpotong di teks instruksi Anda -->
+                    <textarea class="form-control" id="inputPesan" rows="3" placeholder="Tulis pesan atau sapaan kamu di sini.."></textarea>
+                </div>
+                <div class="d-flex justify-content-end gap-2 mt-4">
+                    <button type="button" class="btn btn-secondary">Batal</button>
+                    <button type="button" class="btn btn-primary">Kirim Pesan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 4. HUBUNGI KONTAK (Dipertahankan di bawah Card dengan Bootstrap styling) -->
+    <div class="text-center mt-2">
+        <label class="fw-bold text-white mb-2">Hubungi Kontak Di Bawah</label><br>
+        <a href="https://wa.me" target="_blank" class="btn btn-light btn-sm fw-bold shadow-sm px-4">KLIK IN HERE</a>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS CDN (Diperlukan jika Anda ingin menambahkan interaksi di masa depan) -->
+    <script src="https://jsdelivr.net"></script>
+</body>
+</html>

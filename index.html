@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Page</title>
+  <!-- POIN 6: Menghubungkan ke file tema custom Bootswatch Anda -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body class="bg-light text-dark d-flex flex-column min-vh-100">
+
+    <!-- POIN 2: Mengubah Sidebar Menjadi Top Navbar (Menu Navigasi di Atas) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <!-- Teks Logo sesuai permintaan soal -->
+            <a class="navbar-brand fw-bold" href="#">MyWebsite</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Activity.html">Activity</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galery.html">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- POIN 1: Menggunakan Class Utilitas Bootstrap (container, row, col) -->
+    <main class="container my-5 flex-grow-1">
+        
+        <!-- POIN 3: Membuat Kotak Kartu (Card) Sambutan di Bagian Atas -->
+        
+<div class="card p-5 border-0 shadow-sm text-center mb-5 mx-auto rounded-4"
+     style="max-width: 750px;">
+    <div class="card-body">
+        <h1 class="display-5 fw-bold text-primary mb-3">
+            WELCOME TO MY FIRST WEB
+        </h1>
+
+        <p class="lead text-muted">
+            Selamat datang di situs web pertama saya. Gunakan menu navigasi di atas atau klik kartu di bawah untuk menjelajahi halaman web saya.
+        </p>
+
+        <hr class="my-4">
+
+        
+<!-- Tombol untuk membuka dialog -->
+<button type="button" class="btn btn-primary px-4" onclick="bukaHello()">
+    Hello Button
+</button>
+
+<!-- Dialog Say Hello -->
+<dialog
+    id="dialogHello"
+    class="border-0 rounded-4 shadow p-4 text-center"
+    style="max-width: 340px; width: 90%;"
+>
+    <h4 class="fw-bold text-primary mb-2">HELLOOO!</h4>
+
+    <p class="text-muted small mb-3">
+        Senang kamu mampir ke website sederhana saya!!!
+    </p>
+
+    <!-- Gambar GIF -->
+    <img
+        src="https://media1.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3OTlvNXBlaGpjcmFmaDVnZGh3bW53MmFyd24xZnlpMDR1cGJtY2thaiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/UylrSSPezNeJEtFtx6/200.webp"
+        alt="Minions Hello"
+        class="img-fluid rounded shadow-sm mb-3"
+    >
+
+    <div>
+        <button
+            type="button"
+            class="btn btn-primary btn-sm px-4"
+            onclick="tutupHello()"
+        >
+            Tutup
+        </button>
+    </div>
+</dialog>
+
+<!-- JavaScript untuk membuka dan menutup dialog -->
+
+<script>
+    const dialogHello = document.getElementById('dialogHello');
+
+    function bukaHello() {
+        dialogHello.showModal();
+    }
+
+    function tutupHello() {
+        dialogHello.close();
+    }
+
+    // Pop-up muncul otomatis saat halaman dibuka
+    window.addEventListener('load', function() {
+        dialogHello.showModal();
+    });
+</script>
+
+
+    </div>
+</div>
+
+
+        <div class="row g-4 justify-content-center">
+            <!-- Card Profile -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center rounded-3">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold text-primary">Profile</h5>
+                            <p class="card-text text-muted small">Biodata diri, latar belakang, dan riwayat pendidikan saya.</p>
+                        </div>
+                        <a href="profil.html" class="btn btn-sm btn-outline-primary mt-3">Buka Profile</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Activity -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center rounded-3">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold text-primary">Activity</h5>
+                            <p class="card-text text-muted small">Kumpulan riwayat kegiatan dan kesibukan sehari-hari.</p>
+                        </div>
+                        <a href="Activity.html" class="btn btn-sm btn-outline-primary mt-3">Buka Activity</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Gallery -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center rounded-3">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold text-primary">Gallery</h5>
+                            <p class="card-text text-muted small">Dokumentasi foto dan visual dokumentasi kegiatan.</p>
+                        </div>
+                        <a href="galery.html" class="btn btn-sm btn-outline-primary mt-3">Buka Gallery</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Buku Tamu -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center rounded-3">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold text-primary">Buku Tamu</h5>
+                            <p class="card-text text-muted small">Klik di bawah untuk meninggalkan kesan kunjungan Anda.</p>
+                        </div>
+                        <!-- POIN 5: Tombol Pemicu Modal (Pop-up) -->
+                        <button type="button" class="btn btn-sm btn-success mt-3 fw-bold text-black" style="background-color: #a3e635; border: none;" data-bs-toggle="modal" data-bs-target="#modalBukuTamu">
+                            Isi Buku Tamu
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- POIN 5: Tempat Pemindahan Form Buku Tamu ke Dalam Modal Pop-up -->
+    <div class="modal fade" id="modalBukuTamu" tabindex="-1" aria-labelledby="modalBukuTamuLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <!-- Header Modal -->
+                <div class="modal-header bg-primary text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold" id="modalBukuTamuLabel">Buku Tamu Pengunjung</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Isi Form di dalam Modal -->
+                <div class="modal-body p-4 text-start">
+                    <p class="text-muted small mb-4">Silakan isi form di bawah ini sebagai kenang-kenangan sudah berkunjung:</p>
+                  
+                        <form id="formBukuTamu">
+    <div class="mb-3">
+        <label for="inputNama" class="form-label fw-semibold">
+            Nama Lengkap
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="inputNama"
+            placeholder="Contoh: Budi Santoso"
+            required
+        >
+    </div>
+
+    <div class="mb-3">
+        <label for="inputEmail" class="form-label fw-semibold">
+            Email / NPM
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="inputEmail"
+            placeholder="Masukkan email atau NPM"
+            required
+        >
+    </div>
+
+    <div class="mb-3">
+        <label for="inputPesan" class="form-label fw-semibold">
+            Pesan / Kesan
+        </label>
+        <textarea
+            class="form-control"
+            id="inputPesan"
+            rows="3"
+            placeholder="Tulis pesan atau sapaan kamu di sini..."
+            required
+        ></textarea>
+    </div>
+
+    <div class="d-flex justify-content-end gap-2 mt-4">
+        <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+        >
+            Batal
+        </button>
+
+        <button
+            type="submit"
+            class="btn fw-bold text-dark"
+            style="background-color: #a3e635; border: none;"
+        >
+            Kirim Pesan
+        </button>
+    </div>
+                        </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container d-flex justify-content-between small opacity-75">
+            <span>&copy; 2026 My First Web. All Rights Reserved.</span>
+            <span>Senin, Oktober 2026</span>
+        </div>
+    </footer>
+
+    <!-- WAJIB: Script JS Bundle agar tombol "Isi Buku Tamu" bisa memunculkan Pop-up Modal -->
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('formBukuTamu')
+    .addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const nama = document.getElementById('inputNama').value;
+
+        alert(' WOW '+'Terima kasih, ' + nama +
+              '!!!  Pesan Buku Tamu berhasil dikirim.'+ '  See youu');
+
+        this.reset();
+
+        const modal = document.getElementById('modalBukuTamu');
+        bootstrap.Modal.getOrCreateInstance(modal).hide();
+    });
+</script>
+</body>
+</html>
+
